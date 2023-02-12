@@ -1,0 +1,29 @@
+{
+    "kind": "collectionType",
+    "collectionName": "our_teams",
+    "info": {
+        "singularName": "our-team",
+        "pluralName": "our-teams",
+        "displayName": "Our Team"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string"
+        },
+        "avatar": {
+            "allowedTypes": [
+                "images"
+            ],
+            "type": "media",
+            "multiple": false
+        }
+    }
+}

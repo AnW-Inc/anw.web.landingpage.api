@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  anw_landingpage_client:
+    container_name: anw_landingpage_server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:1337
+    restart: unless-stopped

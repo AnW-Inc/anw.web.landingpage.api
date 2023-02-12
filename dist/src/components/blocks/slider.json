@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_blocks_sliders",
+    "info": {
+        "displayName": "Banner Slider",
+        "icon": "align-justify",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "itemPerSlide": {
+            "type": "integer"
+        },
+        "slideItems": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.slide-item"
+        }
+    }
+}

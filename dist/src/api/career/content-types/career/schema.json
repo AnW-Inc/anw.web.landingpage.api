@@ -1,0 +1,88 @@
+{
+    "kind": "collectionType",
+    "collectionName": "careers",
+    "info": {
+        "singularName": "career",
+        "pluralName": "careers",
+        "displayName": "Career",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "string",
+            "unique": false,
+            "required": true
+        },
+        "slug": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "uid",
+            "targetField": "title",
+            "required": true
+        },
+        "location": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "string",
+            "default": "Ho Chi Minh"
+        },
+        "salary": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "string",
+            "required": false,
+            "default": "You'll love it"
+        },
+        "type": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "enumeration",
+            "enum": [
+                "fulltime",
+                "partime",
+                "remote",
+                "freelancer"
+            ],
+            "default": "fulltime"
+        },
+        "candidates": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::candidate.candidate",
+            "mappedBy": "career"
+        },
+        "content": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "richtext"
+        }
+    }
+}
